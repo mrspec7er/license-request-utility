@@ -5,7 +5,7 @@ import (
 	"os"
 
 	_ "github.com/lib/pq"
-	"github.com/mrspec7er/license-request/service-utility/dto"
+	"github.com/mrspec7er/license-request-utility/dto"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

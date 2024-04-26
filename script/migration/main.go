@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/joho/godotenv"
-	"github.com/mrspec7er/license-request/service-utility/dto"
-	"github.com/mrspec7er/license-request/service-utility/internal/db"
+	"github.com/mrspec7er/license-request-utility/dto"
+	"github.com/mrspec7er/license-request-utility/internal/db"
 
 	"gorm.io/gorm"
 )

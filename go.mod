@@ -1,4 +1,4 @@
-module github.com/mrspec7er/license-request/service-utility
+module github.com/mrspec7er/license-request-utility
 
 go 1.22.2
 
