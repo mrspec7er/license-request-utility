@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/joho/godotenv"
 	"github.com/mrspec7er/license-request-utility/dto"
 	"github.com/mrspec7er/license-request-utility/internal/db"
@@ -20,6 +22,7 @@ func main() {
 
 	SeedDatabase(DB)
 
+	fmt.Println("Seed applied!")
 }
 
 func SeedDatabase(DB *gorm.DB) {
