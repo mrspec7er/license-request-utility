@@ -71,3 +71,11 @@ type Response struct {
 	Application       *Application `json:"application"`
 	Field             *Field       `json:"field"`
 }
+
+type Logger struct {
+	BaseModel
+	Status  int    `json:"status"`
+	UID     string `json:"uid" gorm:"index,priority:1; type:varchar(64)"`
+	Payload string `json:"payload" gorm:"type:text"`
+	Message string `json:"message" gorm:"type:text"`
+}
