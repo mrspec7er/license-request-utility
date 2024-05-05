@@ -52,15 +52,18 @@ type User struct {
 }
 
 type Application struct {
-	Number    string      `json:"number" gorm:"primaryKey; index:priority:1; type:varchar(63)"`
-	FormID    int64       `json:"formId" gorm:"type:bigint"`
-	UserID    string      `json:"userId" gorm:"type:bigint"`
-	Form      *Form       `json:"form"`
-	User      *User       `json:"user"`
-	Responses []*Response `json:"responses" gorm:"foreignKey:ApplicationNumber;references:Number"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt gorm.DeletedAt `gorm:"index"`
+	Number     string      `json:"number" gorm:"primaryKey; index:priority:1; type:varchar(63)"`
+	FormID     int64       `json:"formId" gorm:"type:bigint"`
+	UserID     string      `json:"userId" gorm:"type:bigint"`
+	Form       *Form       `json:"form"`
+	User       *User       `json:"user"`
+	Status     string      `json:"status" gorm:"type:varchar(63)"`
+	ApprovedBy string      `json:"approvedBy" gorm:"type:varchar(255)"`
+	Note       string      `json:"note" gorm:"type:text"`
+	Responses  []*Response `json:"responses" gorm:"foreignKey:ApplicationNumber;references:Number"`
+	CreatedAt  time.Time
+	UpdatedAt  time.Time
+	DeletedAt  gorm.DeletedAt `gorm:"index"`
 }
 
 type Response struct {
